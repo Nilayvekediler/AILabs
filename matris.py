@@ -1,4 +1,6 @@
 import numpy as np
+import time
+
 birim=input("Birim matris'in boyut bilgisini giriniz: ")
 birimM=np.identity(int(birim))
 print(birimM)
@@ -25,13 +27,15 @@ else:
 
 i2=input("\nRastgele oluşturulacak 2. matrisin satır sayısını (i) giriniz: ")
 j2=input("Rastgele oluşturulacak 2. matrisin sütun sayısını (j) giriniz: ")
-
+time.sleep(30)
 randomM2=np.random.randint(10, size=(int(i2),int(j2)))  
+
 print(randomM2)
 print("\nMatris 1: ")
 print(randomM)
 print("Matris 2: ")
 print(randomM2)
+time.sleep(30)
 if(i==i2 and j==j2):
     totalM=np.add(randomM,randomM2)
     subM=np.subtract(randomM,randomM2)
@@ -41,7 +45,7 @@ if(i==i2 and j==j2):
     print(subM)
 else:
     print("\nMatrisler aynı tipli olmadığından toplama ve çıkarma işlemi yapılamaz.")
-
+time.sleep(30)
 if(j==i2):
     mulM=np.matmul(randomM,randomM2)
     transposeM2=mulM.transpose()
@@ -51,4 +55,3 @@ if(j==i2):
     print(transposeM2)
 else:
     print("\n1. matrisin kolon sayısıyla 2. matrisin satır sayısı eşit olmadığından çarpma işlemi yapılamaz.")
-
